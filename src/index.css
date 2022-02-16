@@ -1,13 +1,33 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#hero {
+  height: calc(70vh - 130px);
+  min-height: 136px;
+  padding-bottom: 9%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media (min-width: 640px) {
+  #hero {
+    height: calc(83vh - 130px);
+    min-height: 215px;
+  }
 }
+
+@media (min-width: 1024px) {
+  #hero {
+    height: calc(83vh - 193px);
+  }
+}
+
+@media (min-width: 1440px) {
+  #hero {
+    height: calc(83vh - 252px);
+  }
+}
+
+/* nav pt - 32px to 100px */
+
+/* TODO: for padding of 24px for mobile to 650px.. then 50px till 1440px.. then 105px */
+/* TODO: img at 100% width with 0 padding till 1024px... then 50px padding */
